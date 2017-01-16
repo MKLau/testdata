@@ -1,0 +1,24 @@
+Package: testdata
+Type: Package
+Title: Unit testing for data
+Version: 0.0.1.9000
+Authors@R: c(
+      person("John", "Peach", , "john@jppeach.com", role = c("aut", "cre", "cph")),
+      person("Marilson", "Campos", , "m@orion2.net", role = c("aut", "cph")),
+      person("Prasad", "Telukuntla", , "tnsprasad03@gmail.com", role = c("aut", "cph"))
+   )
+Description: A flexible test harness for performing unit tests on data. Based on
+    the the software development concept of unit testing for functions, this package
+    extends those concepts to validating data before performing analysis.
+Depends:
+    R (>= 3.1.0)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports:
+    testthat (>= 1.0.2)
+Suggests:
+    devtools
+RoxygenNote: 5.0.1
+Collate:
+    'testthat-evaluate-promise.R'
