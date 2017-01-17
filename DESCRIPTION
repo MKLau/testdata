@@ -16,9 +16,20 @@ License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Imports:
+    R6 (>= 2.2.0),
     testthat (>= 1.0.2)
 Suggests:
     devtools
 RoxygenNote: 5.0.1
 Collate:
+    'reporter.R'
     'testthat-evaluate-promise.R'
+    'testthat-expect-comparison.R'
+    'testthat-expect-equal-to-reference.R'
+    'testthat-expect-equality.R'
+    'testthat-expect-inheritance.R'
+    'testthat-expect-length.R'
+    'testthat-expect-logical.R'
+    'testthat-expect-named.R'
+    'testthat-expect-output.R'
+    'testthat-expect-self-test.R'
