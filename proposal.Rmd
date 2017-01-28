@@ -18,9 +18,9 @@ directory with the same name `proposal.Rmd`. Do not change the name!
 0. Who are the authors of this package? See format below.
 
 ```{r q0}
-authors <- list(sunet1 = "John Peach",
-                sunet2 = "Marilson Campos",
-                sunet3 = "Prasad Telukuntla")
+authors <- list(jpeach = "John Peach",
+                mcampos = "Marilson Campos",
+                ptelukun = "Prasad Telukuntla")
 ```
 
 1. What is your package trying to achieve?  Who is it aimed at?
@@ -106,17 +106,17 @@ proficient <- "proficient"
 ```{r q5}
 languages <- list(
     ## replace the values below appropriately for each member
-    sunet1 = c(cxx = proficient,
+    jpeach = c(cxx = proficient,
                java = proficient,
                python = proficient,
                ruby = none)
     ,
-    sunet2 = c(cxx = proficient,
+    mcampos = c(cxx = proficient,
                java = proficient,
                python = proficient,
                ruby = none)
     ,
-    sunet3 = c(cxx = proficient,
+    ptelukun = c(cxx = proficient,
                java = proficient,
                python = proficient,
                ruby = none)
