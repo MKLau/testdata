@@ -1,3 +1,7 @@
+##
+## Begin Peach code
+##
+
 #' Expectation: does the object inherit from a S3 or S4 class, or a base type?
 #'
 #' Tests whether or not an object inherits from any of a list of classes, or
@@ -63,3 +67,7 @@ expect_s3_class <- function(object, class) {
 expect_s4_class <- function(object, class) {
   testthat::expect_s4_class(object, class)
 }
+
+##
+## End Peach code
+##

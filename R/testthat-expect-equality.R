@@ -1,3 +1,7 @@
+##
+## Begin Peach code
+##
+
 #' Expectation: is the object equal to a value?
 #'
 #' - `expect_identical` tests with [identical()]
@@ -70,3 +74,7 @@ expect_identical <- function(object, expected, info = NULL, label = NULL,
                              expected.label = NULL) {
    testthat::expect_identical(object, expected, info, label, expected.label)
 }
+
+##
+## End Peach code
+##

@@ -1,3 +1,7 @@
+## 
+## Start Peach code
+##
+
 #' Expectation: does a vector have the specified length?
 #'
 #' @inheritParams testthat::expect_length
@@ -14,3 +18,7 @@
 expect_length <- function(object, n) {
    testthat::expect_length(object, n)
 }
+
+##
+## End Peach code
+##

@@ -1,3 +1,7 @@
+##
+## Start Peach code
+##
+
 #' Expectation: is the object true/false?
 #'
 #' These are fall-back expectations that you can use when none of the other
@@ -39,3 +43,7 @@ expect_true <- function(object, info = NULL, label = NULL) {
 expect_false <- function(object, info = NULL, label = NULL) {
    testthat::expect_false(object, info, label)
 }
+
+##
+## End Peach code
+##

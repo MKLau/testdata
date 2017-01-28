@@ -1,3 +1,7 @@
+##
+## Start Peach code
+##
+
 #' Expectation: does code produce output/message/warning/error?
 #'
 #' Use `expect_output()`, `expect_message()`, `expect_warning()`,
@@ -120,3 +124,7 @@ expect_warning <- function(object, regexp = NULL, ..., all = FALSE,
 expect_silent <- function(object) {
    testthat::expect_silent(object)
 }
+
+##
+## End Peach code
+##

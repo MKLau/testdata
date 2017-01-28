@@ -1,3 +1,7 @@
+##
+## Begin Peach code
+##
+
 #' Expectation: is the object equal to a reference value stored in a file?
 #'
 #' This expectation is equivalent to [expect_equal()], except that the
@@ -27,3 +31,7 @@ expect_equal_to_reference <- function(object, file, ..., info = NULL,
 
    testthat::expect_equal_to_reference(object, file, ..., info, label, expected.label)
 }
+
+##
+## End Peach code
+##

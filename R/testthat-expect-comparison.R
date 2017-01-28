@@ -1,3 +1,7 @@
+##
+## Begin Peach code
+##
+
 #' Expectation: is returned value less or greater than specified value?
 #'
 #' @inheritParams testthat::expect_lt
@@ -41,3 +45,7 @@ expect_gt <- function(object, expected, label = NULL, expected.label = NULL) {
 expect_gte <- function(object, expected, label = NULL, expected.label = NULL) {
   testthat::expect_gte(object, expected, label, expected.label)
 }
+
+##
+## End Peach code
+##

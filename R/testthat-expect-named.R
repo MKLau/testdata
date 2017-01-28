@@ -1,3 +1,7 @@
+##
+## Start Peach code
+##
+
 #' Expectation: does object have names?
 #'
 #' You can either check for the presence of names (leaving `expected`
@@ -26,3 +30,7 @@ expect_named <- function(object, expected, ignore.order = FALSE,
                           info, label)
 
 }
+
+##
+## End Peach code
+## 

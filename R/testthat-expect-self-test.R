@@ -1,3 +1,7 @@
+##
+## Start Peach code
+##
+
 #' @include reporter.R
 NULL
 
@@ -18,3 +22,8 @@ expect_success <- function(expr) {
 expect_failure <- function(expr, message = NULL, ...) {
    testthat::expect_failure(expr, message, ...)
 }
+
+##
+## End Peach code
+##
+

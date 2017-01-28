@@ -1,3 +1,7 @@
+##
+## Begin Peach code
+##
+
 #' Evaluate a promise, capturing all types of output.
 #'
 #' These functions allow you to capture the side-effects of a function call
@@ -44,3 +48,7 @@ capture_warnings <- function(code) {
 capture_output <- function(code, print = FALSE) {
    testthat::capture_output(code, print)
 }
+
+## 
+## End Peach code
+##

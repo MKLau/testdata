@@ -1,3 +1,11 @@
+##
+## Start Peach code
+##
+
+## This code is copied from the testthat package and is
+## under the GPL3 licence. It required to wrap some of the
+## testthat functions
+
 #' Stub object for managing a reporter of tests.
 #'
 #' Do not clone directly from this object - children should implement all
