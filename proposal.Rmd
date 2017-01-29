@@ -82,21 +82,24 @@ Here are some examples of verifications:
    an idea.
 
 ```q4
-The main function will be defined as verify (data_tests, data). This function will load 'data test' 
-definitions and validate them against the data frame provided.
-
-Each verification will either pass of generate a 'report' explaining what failed.
-
-There will be a family of functions starting with 'is_' that will test a column of the  data frame 
-against a constraint. 
-
-Here are some of examples: 
-  'is_within_abs_tolerance', 'is_within_percent_tolerance', etc.
-
-The data test cases will be defined using functions of the form 'verify_data(description, code)' 
+The main function will be defined as test_data(description, code_block). The data test cases 
+will be defined using functions of the form 'test_data(description, code_block)' 
 in a similar way of the 'test_that' function from the testthat package.
 
-We are including the package 'testthat' in our 'testdata' package.
+There will be a family of functions starting with 'expect_' that will test the data. 
+Here are some of examples: 
+  'expect_length', 'expect_mean', 'expect_lte', 'expect_gt', etc.
+
+We are wrapping the package 'testthat' in our 'testdata' package. The testthat package is not 
+vectorized but testdata will be. For example:
+test_that( "sum should be 55", { 
+   expect_equal(sum(1:10), 55) 
+} )
+
+A vectorized version would be
+test_data( "equal paired values", { 
+   expect_equal( c(1, 2, 3, 4, 5, 7, 8, 9, 10), 1:10)
+})
 ```
 
 ```{r, echo = FALSE, hide = TRUE}
