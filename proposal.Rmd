@@ -26,12 +26,15 @@ authors <- list(jpeach = "John Peach",
 1. What is your package trying to achieve?  Who is it aimed at?
 
 ```q1
+Best practices for data analysis require that the Data Scientist perform a series of steps to clean the data and in doing so shape the data into a known form and state. This is often a time consuming and manual process. After this is done the Data Scientist begins the exploration phase of the analysis and often discovers further cleaning that must be performed.  As new data is added or a new data set replaces the old the entire process must be repeated. This creates concerns that the shape, nature and form of the data my not be consistent from one analysis to the next
 
-1. package name is testdata, This package is a tool/framework that validates input data just like how we validate the code. In some cases, Data scientists spend quiet a bit of time to retrain model when the input dataset changes. At that point, Data scientist has to inspect the changes in the data and see what caused model to fail or not work as expected such as distribution of features, outliers and missing values etc. This Framework helps define characteristics of dataset and validate them. Aditionally, this framework can plug right into preprocess stage of prediction pipeline.  
+Software developers have a similar issue when it comes to validating their code. Once a unit of code has been written it must be validated to confirm that it performing as expected. Data Scientists must validate that their data is also in the shape, nature and form as they understand it. While the shaping, forming and understanding the nature is generally done in the cleaning phase it is rare to perform formal validation.
 
-2. testdata package is aimed at Data scientists, Analytics and Data Engineers in any industry where the statistical/machine learning models are used/deployed in production (e.g., serving Data products, Apps etc to the customer etc).
+The goal of this package is to develop a set of tools/framework that validates the cleaned data. It uses a unit testing approach that are familiar to many Data Scientists and software developers. It extends the popular testthat package by adding tests that are specific to validating data and also vectorizing existing tests. This approach allows the Data Scientist to test the assumptions that they make on the data by ensuring that the shape, statistical characteristics, data types, column and row names are defined as expected. 
 
+In doing so, it increases the confidence that nothing has been missed when a data file is used and reduces the amount of re-analysis that is performed because the data was not cleaned properly, violated statistical assumptions or stored incorrectly in data structures. In doing this, when data is added or a replacement data set is used, there is a greater degree of confidence that the data is well conditioned and at the same time reducing the need for time consuming need to manually recheck the data after cleaning.
 
+The testdata package is aimed at Data Scientists, Analysts and Data Engineers in any industry or academic field. It is a generalized tool to aid in the reproducibility of results and formalizing the technical steps in the analysis process.
 
 ```
 
