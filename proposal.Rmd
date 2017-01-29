@@ -19,7 +19,7 @@ directory with the same name `proposal.Rmd`. Do not change the name!
 
 ```{r q0}
 authors <- list(jpeach = "John Peach",
-                mcampos = "Marilson Campos",
+                marilson = "Marilson Campos",
                 ptelukun = "Prasad Telukuntla")
 ```
 
@@ -120,7 +120,7 @@ languages <- list(
                python = proficient,
                ruby = none)
     ,
-    mcampos = c(cxx = proficient,
+    marilson = c(cxx = proficient,
                java = proficient,
                python = proficient,
                ruby = none)
