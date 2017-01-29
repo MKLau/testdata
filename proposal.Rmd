@@ -44,42 +44,40 @@ The testdata package is aimed at Data Scientists, Analysts and Data Engineers in
    where available.
 
 ```q2
+This package is inspired by the "Unit testing" technique, where additional code ('test code'), is written to 
+validate parts of the application against a set of rules ('test cases.')
 
-This package is a framework and applicable to most of the domains. Following is the scope of testdata validation framework.
+These tests are then used to report errors as changes to the program will make it produce results that violate 
+the rules defined in test cases. 
 
-1) Validate list of dataframes
-2) Validate the Model objects (lm, GLM etc)
-3) Validate list of row names
-4) Validate list of all column names
-5) Validate All factors present for a set of columns
-6) Valdiate for a given set of values present in specified columns
-7) Valdiate if all values are present for a set of columns
-8) Validate if a particular column is Ascending order or Descending order
-9) Metric (Mean, sum, standard deviation etc) are within a range
-10) Custom Metric (with extra parameters for computing it) within a range
-11) Expected Number of factors
-12) All factors exit
-13) Detecting Outliers based on the definition
-14) Checking for Greater than, Greater than or equal, Less than and Less than or equal
-15) Columns Floor and Ceiling
-16) Test for normalcy
-17) Vignette documenation of each of the use case
+We apply the same idea to the 'data,' where we define 'data test cases' and validate the dataset using these 
+rules.
 
+References:
+A tool to perform tests on data: 
+https://www.import.io/post/how-to-test-the-quality-of-web-data/
 
-This package is inspired by the Hadley Wickham's package testthat. 
-github: https://github.com/hadley/testthat
-Reference: http://r-pkgs.had.co.nz/tests.html
-
+Unit testing in R:  Hadley Wickham's package testthat. 
+http://r-pkgs.had.co.nz/tests.html
+github: (https://github.com/hadley/testthat)```
 ```
-
 3. Provide one or two use cases; that is, in a sentence or so say how
    you see someone using the package.
 
+
 ```q3
+In reproducible research, we execute a 'data cleaning' step followed by the steps unique to the research.
 
-Data Scientists once they complete the model, they can run this pacakge on the new dataset that comes in to check if the data validation is passed before performing final prediction. This can also work as Monitorting component in the production pipeline. As data validation is hard and only Data Scientist can help define that through this pacakage.
+Data Scientists can use this tool to add a new 'data validation' step after the 'data cleaning' step. In 
+this 'data validation' step, we look at the data profile and define rules ('assumptions') about the data.
 
+Next time that we process a new 'version' of the dataset, we can verify that these assumptions about the
+data are still valid. 
 
+Here are some examples of verifications:  
+1. factor 'state' has 50 levels, and each level has values.
+2. field 'age' has median between 17 - 35 years old.
+3. field 'age' has no record with a value larger than 55 years.
 
 ```
 
@@ -88,12 +86,21 @@ Data Scientists once they complete the model, they can run this pacakge on the n
    an idea.
 
 ```q4
+The main function will be defined as verify(data_tests, data). This function will load 'data test' 
+definitions and validate them against the data frame provided.
 
-The R package will provide the following functions: reading and
-writing data, creating graphs and visualizations, running
-parameterized queries against datasets.  The R package will also
-provide functions for generating vignette and report on the test results.
+Each verification will either pass of generate a 'report' explaining what failed.
 
+There will be a family of functions starting with 'is_' that will test a column of the  data frame 
+against a constraint. 
+
+Here are some of examples: 
+  'is_within_abs_tolerance', 'is_within_percent_tolerance', etc.
+
+The data test cases will be defined using functions of the form 'verify_data(description, code)' 
+in a similar way of the 'test_that' function from the testthat package.
+
+We are including the package 'testthat' in our 'testdata' package.
 ```
 
 ```{r, echo = FALSE, hide = TRUE}
